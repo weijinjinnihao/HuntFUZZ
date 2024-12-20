@@ -1,0 +1,39 @@
+#ifndef INCLUDE_COMMONCONFIG_H__
+#define INCLUDE_COMMONCONFIG_H__
+
+#define ENV_COVERAGE_SHM_ID "MFUZZ_COVERAGE_SHM_ID"
+#define ENV_COVERAGE_SHM_INDEX "MFUZZ_COVERAGE_SHM_INDEX"
+#define ENV_COVERAGE_DEBUG "MFUZZ_COVERAGE_DEBUG"
+#define MFUZZ_FORSRV_STDERR_FILE "/tmp/mfuzz_forsrv_stderr"
+#define MFUZZ_REMOTE_STDERR_FILE "/tmp/mfuzz_remote_stderr"
+#define MFUZZ_KERNEL_LOG_FILE "/tmp/mfuzz_kernel_log"
+#define FORSRV_FD 198
+#define COVERAGE_MAP_SIZE (1 << 22)
+
+#define ENV_FAULTINJECT_INJECT_SHM_ID "MFUZZ_FAULTINJECT_INJECT_SHM_ID"
+#define ENV_FAULTINJECT_REACHED_SHM_ID "MFUZZ_FAULTINJECT_REACHED_SHM_ID"
+#define ENV_FAULTINJECT_MAX_REACHED "MFUZZ_FAULTINJECT_MAX_REACHED"
+#define ENV_FAULTINJECT_DEBUG "MFUZZ_FAULTINJECT_DEBUG"
+#define FAULTINJECT_REACHED_MAP_SIZE (1 << 19)
+#define FAULTINJECT_INJECT_MAP_SIZE (FAULTINJECT_REACHED_MAP_SIZE >> 3)
+
+#define LLVMFILES_TMP_DIR "/tmp/mfuzz_llvmfiles/"
+#define TMP_ANALYSIS_RESULT_PATH "/tmp/mfuzz_analysis"
+#define TMP_FAULT_POINT_PATH "/tmp/mfuzz_analysis.faultsite"
+#define TMP_NULLABLE_MEMBER_PATH "/tmp/mfuzz_analysis.nullable"
+
+#define KERNEL_MONITOR_DEV "mfuzz_monitor"
+#define KERNEL_MONITOR_PROC_DIR "mfuzz"
+#define KERNEL_MONITOR_LOGGER_PROC "monitor_logger"
+#define KERNEL_MMAP_COVERAGE_SHM "mmap_cov"
+#define KERNEL_MMAP_REACHED_SHM "mmap_reached"
+#define KERNEL_MMAP_INJECTED_SHM "mmap_injected"
+
+#define FAULTINJECT_CLIENT_LOG_PATH_NORMAL "/var/log/normal"
+#define FAULTINJECT_CLIENT_LOG_PATH_CRASH "/var/log/crash"
+
+#define ATAT_REPLACE_PATH "./file"
+
+
+#define MAGIC_ERROR_RETCODE 86
+#endif
